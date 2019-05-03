@@ -34,5 +34,17 @@
             %>
             <b><%=num%></b>
             
+            
+            
+            <form>
+                <input type="text" name="txtName"/>
+                <input type="submit" name="Enter"/>
+                
+            </form>
+            
+            <%
+                String val = request.getParameter("txtName");
+                out.println(val);
+                <%>
     </body>
 </html>
