@@ -1,50 +1,37 @@
-<%-- 
-    Document   : index
-    Created on : 02/05/2019, 21:15:48
-    Author     : EducaciónIT
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%!   //Scriplet de declaracion - debe llevar %!
- int sum(int a, int b){
-    return a+b;} 
-%>
-
-
-
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+     
     </head>
     <body>
-        
-        <%for (int i = 1; i < 7; i++) {%>
+        <form id="data" name="data" action="signIn" method="post"> <!-- el action te permite elegir donde enviar la infomacion-->
+            <table>
+                <tr>
+                    <td> <label>Login</label></td>
+                    <td><input type="text" id="username" name="username"</td>
+                </tr>
+                <tr>
+                    <td> <label>Password</label></td>
+                    <td><input type="password" id="password" name="password"</td>
+                </tr>
+                 
+                   <% if (request.getParameter ("err") !=null && 
+                            request.getParameter ("err").equals("100")) {%>
+                            <tr>
+                                <td colspan="2"><label>USER AND PASSWORD INVALID!!!</label></td>
+                            </tr>    
+                    <%}%>
                 
-        <h<%=i%>>Hello World!</h>%=1%>>
-            
-            <%}%>
-            
-        <%
-            int num = 9*2;
-            out.println(sum(3,4));
-            
-            %>
-            <b><%=num%></b>
-            
-            
-            
-            <form>
-                <input type="text" name="txtName"/>
-                <input type="submit" name="Enter"/>
+                <tr>
+                    <td><input type="submit"></td>
+                    <td><input type="reset"></td>
+                    
+                </tr>
                 
-            </form>
-            
-            <%
-                String val = request.getParameter("txtName");
-                out.println(val);
-                <%>
+            </table>
+        </form>
     </body>
 </html>
