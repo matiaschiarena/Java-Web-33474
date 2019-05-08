@@ -17,7 +17,7 @@
         
         
         
-        <form id="formulario" name="formulario" action="formulario" method="post"> 
+        <form id="formulario" name="formulario" action="formu" method="post"> 
             <table>
                 <tr>
                     <td> <label>Nombre</label></td>

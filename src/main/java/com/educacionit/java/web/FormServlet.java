@@ -12,22 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-@WebServlet("/signIn")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/formu")
+public class FormServlet extends HttpServlet {
 
     @Override
     protected void doPost (HttpServletRequest request, HttpServletResponse response) throws IOException {
        
-        String u = request.getParameter("username");
-        String p = request.getParameter("password");
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
        
-        if (u.equals("admin") && p.equals("admin")) {
-            response.sendRedirect("home.jsp");
+       
+            response.sendRedirect("procesoFormulario.jsp");
             HttpSession session = request.getSession();
-            session.setAttribute("username", "System Administrator");
-            
-        } else {
-            response.sendRedirect("index.jsp?err=100");
-    }
+            session.setAttribute("nombre", nombre);
+            session.setAttribute("apellido", apellido);
+       
+  
 }
 }
