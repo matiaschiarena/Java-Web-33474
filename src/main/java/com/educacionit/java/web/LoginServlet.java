@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         if (u.equals("admin") && p.equals("admin")) {
             response.sendRedirect("home.jsp");
             HttpSession session = request.getSession();
-            session.setAttribute("username", "System Adninistrator");
+            session.setAttribute("username", "System Administrator");
             
         } else {
             response.sendRedirect("index.jsp?err=100");
