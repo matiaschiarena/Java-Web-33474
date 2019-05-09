@@ -20,13 +20,24 @@ public class FormServlet extends HttpServlet {
        
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
-       
+        String email = request.getParameter("email");
+        String educacion = request.getParameter("educacion");
+        String estado = request.getParameter("estado");
+        String sexo = request.getParameter("sexo");
+        String edad = request.getParameter("edad");
+        String fecha = request.getParameter("fecha");
+
        
             response.sendRedirect("procesoFormulario.jsp");
             HttpSession session = request.getSession();
             session.setAttribute("nombre", nombre);
             session.setAttribute("apellido", apellido);
-       
+            session.setAttribute("email", email);
+            session.setAttribute("educacion", educacion);
+            session.setAttribute("estado", estado);
+            session.setAttribute("sexo", sexo);
+            session.setAttribute("edad", edad);
+            session.setAttribute("fecha", fecha);
   
 }
 }

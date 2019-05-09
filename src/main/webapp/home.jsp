@@ -36,11 +36,11 @@
                 <tr>
                     <td> <label>Educacion</label></td>
                     <td>			
-				<select name="origen" id="educacion">
-					<option> Primaria </option>
-					<option> Secundaria </option>
-					<option> Terciaria </option>
-					<option> Universitaria </option>
+				<select name="educacion" id="educacion">
+					<option>Primaria</option>
+					<option>Secundaria</option>
+					<option>Terciaria</option>
+					<option>Universitaria</option>
 				</select>
 			</label></td>
                 </tr>   
